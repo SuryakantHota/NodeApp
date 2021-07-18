@@ -35,10 +35,11 @@ const getCurrentWeather = ( query, cb) => {
             cb("Unable to get weather condition, try another", undefined);
         } else {
             const {body} = response;
+            console.log("body", body);
             cb(undefined, {
                 "description": body.current.weather_descriptions[0],
                 "temperature": body.current.temperature,
-                "feelsLike": body.current.feelsLike
+                "feelsLike": body.current.feelslike
             });
         }
     });

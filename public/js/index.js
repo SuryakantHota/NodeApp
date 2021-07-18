@@ -29,7 +29,7 @@ formEle.addEventListener("submit", ( event ) => {
     console.log("location", location);
     getWeatherData(location).then(( data ) => {
         console.log("data", data);
-        m1.textContent = "Currently it is " + data.description + " and " + data.temperature + " degree C now at " + data.location;
+        m1.textContent = "Currently it is " + data.description + " and " + data.temperature + " degree C now at " + data.location + ", It feels " + data.feelsLike + " degree C";
     }).catch(( err ) => {
         console.log("err", err);
         m1.textContent = "";

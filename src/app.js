@@ -4,7 +4,7 @@ const hbs = require("hbs");
 const Utils = require("./utils");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Define paths for Express config
 const viewsPath = path.join(__dirname, "../templates/views");
