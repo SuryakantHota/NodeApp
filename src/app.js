@@ -4,6 +4,7 @@ const hbs = require("hbs");
 const Utils = require("./utils");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Define paths for Express config
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -97,6 +98,6 @@ app.get("*", ( req, res ) => {
     });
 });
 
-app.listen(4000, () => {
-    console.log("Server is up on port 4000");
+app.listen(PORT, () => {
+    console.log("Server is up on port", PORT);
 });

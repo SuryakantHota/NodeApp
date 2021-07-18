@@ -2,7 +2,7 @@ console.log("js file is loaded");
 
 const getWeatherData = ( location ) => {
     return new Promise(( resolve, reject ) => {
-        fetch("http://localhost:4000/weather?address=" + location).then(( resp ) => {
+        fetch("/weather?address=" + location).then(( resp ) => {
             return resp.json();
         }).then(( data ) => {
             if ( data.error ) {
